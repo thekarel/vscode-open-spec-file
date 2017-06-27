@@ -1,17 +1,22 @@
+var createFile = require('./createFile')
+var fileExists = require('./fileExists')
 var getCurrentDocument = require('./getCurrentDocument')
 var isExistingFile = require('./isExistingFile')
 var makeSpecFilePath = require('./makeSpecFilePath')
-var openfile = require('./openFile')
+var openFileInEditor = require('./openFileInEditor')
 
 module.exports = function () {
         var currentFile = getCurrentDocument()
-        var isCurrentFileExists = isExistingFile(currentFile)
 
-        if (!isCurrentFileExists) {
+        if (!isExistingFile(currentFile)) {
             return
         }
 
         const specFilePath = makeSpecFilePath(currentFile)
+
+        if (!fileExists(specFilePath)) {
+            createFile(specFilePath)
+        }
         
-        openfile(specFilePath)
+        openFileInEditor(specFilePath)
     }
