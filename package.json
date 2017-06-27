@@ -18,6 +18,11 @@
         "commands": [{
             "command": "extension.openSpecFile",
             "title": "Open Spec File"
+        }],
+        "keybindings": [{
+            "command": "extension.openSpecFile",
+            "key": "ctrl+k ctrl+k",
+            "mac": "cmd+k cmd+k"
         }]
     },
     "scripts": {
