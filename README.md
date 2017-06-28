@@ -10,4 +10,4 @@ The extension will create an empty file next to the current one with the exact b
 
 You can use the Command Palette: `> Open Spec File`, or the default key binding: `⌘+K ⌘+K` / `CTRL-K CTRL-K`
 
-![Open Spec File demonstration](http://i.imgur.com/K8ju9Oe.gif)
+![Open Spec File demonstration](https://i.imgur.com/K8ju9Oe.gif)
