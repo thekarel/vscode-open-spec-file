@@ -23,7 +23,18 @@
             "command": "extension.openSpecFile",
             "key": "ctrl+k ctrl+k",
             "mac": "cmd+k cmd+k"
-        }]
+        }],
+        "configuration": {
+            "type": "object",
+            "title": "Open Spec File configuration",
+            "properties": {
+                "openSpecFile.specSuffix": {
+                    "type": "string",
+                    "default": ".spec",
+                    "description": "File suffix used to open or create a test file."
+                }
+            }
+        }
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
