@@ -10,6 +10,11 @@ suite('Make Spec Filename', function() {
                 fsPath: '/home/bob/index.js'
             }
         }
-        assert.equal(makeSpecFileName(srcFile), '/home/bob/index.spec.js')
+
+        var configuration = {
+            specSuffix: '.kitkat'
+        }
+
+        assert.equal(makeSpecFileName(srcFile, configuration), '/home/bob/index.kitkat.js')
     })
 })
