@@ -4,19 +4,23 @@ var getCurrentDocument = require('./getCurrentDocument')
 var isExistingFile = require('./isExistingFile')
 var makeSpecFilePath = require('./makeSpecFilePath')
 var openFileInEditor = require('./openFileInEditor')
+var vscode = require('vscode')
 
 module.exports = function () {
-        var currentFile = getCurrentDocument()
+    var configuration = vscode.workspace.getConfiguration('openSpecFile')
+    var specSuffix = configuration.get('specSuffix')
 
-        if (!isExistingFile(currentFile)) {
-            return
-        }
+    var currentFile = getCurrentDocument()
 
-        const specFilePath = makeSpecFilePath(currentFile)
-
-        if (!fileExists(specFilePath)) {
-            createFile(specFilePath)
-        }
-        
-        openFileInEditor(specFilePath)
+    if (!isExistingFile(currentFile)) {
+        return
     }
+
+    const specFilePath = makeSpecFilePath(currentFile, {specSuffix: specSuffix})
+
+    if (!fileExists(specFilePath)) {
+        createFile(specFilePath)
+    }
+
+    openFileInEditor(specFilePath)
+}
