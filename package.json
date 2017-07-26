@@ -2,7 +2,7 @@
     "name": "open-spec-file",
     "displayName": "Open Spec File",
     "description": "Quickly access spec files for TDD zen",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "thekarel",
     "engines": {
         "vscode": "^1.13.0"
@@ -47,5 +47,13 @@
         "eslint": "^3.6.0",
         "@types/node": "^6.0.40",
         "@types/mocha": "^2.2.32"
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/thekarel/vscode-open-spec-file/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/thekarel/vscode-open-spec-file.git"
+    },
+    "homepage": "https://github.com/thekarel/vscode-open-spec-file"
 }
