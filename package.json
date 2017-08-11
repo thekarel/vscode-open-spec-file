@@ -2,7 +2,7 @@
     "name": "open-spec-file",
     "displayName": "Open Spec File",
     "description": "Quickly access spec files for TDD zen",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "thekarel",
     "icon": "icon.png",
     "engines": {
@@ -29,10 +29,13 @@
             "type": "object",
             "title": "Open Spec File configuration",
             "properties": {
-                "openSpecFile.specSuffix": {
-                    "type": "string",
-                    "default": ".spec",
-                    "description": "File suffix used to open or create a test file."
+                "openSpecFile.suffixMap": {
+                    "type": "object",
+                    "default": {
+                        ".js": ".spec.js",
+                        ".spec.js": ".js",
+                        ".html": ".css"
+                    }
                 }
             }
         }
