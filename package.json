@@ -4,6 +4,7 @@
     "description": "Quickly access spec files for TDD zen",
     "version": "0.0.3",
     "publisher": "thekarel",
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.13.0"
     },
