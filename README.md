@@ -20,3 +20,5 @@ Using VS Code's preferences, you can set the suffix to be added the spec file (d
 ```
 
 ![Open Spec File demonstration](https://i.imgur.com/K8ju9Oe.gif)
+
+Icon by [Freepik](https://www.flaticon.com/free-icon/link_282100) CC 3.0 BY
