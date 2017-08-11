@@ -1,4 +1,4 @@
-# VSCode Open Related File
+# VSCode Open Spec File
 
 A Visual Studio Code extension to simplify your TDD workflow by creating and opening the .spec file next to the source with one command.
 
