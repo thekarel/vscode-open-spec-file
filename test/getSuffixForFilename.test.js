@@ -25,4 +25,17 @@ suite('Get Suffix For Document', function() {
 
         assert.deepEqual(getSuffixForFilename(map, filename), {fromSuffix: '.foo', toSuffix: '.bar'})
     });
+
+    suite('The file name matches multiple keys', () => {
+        test('returns the map that more closely matches', () => {
+            const filename = 'a.spec.js';
+
+            const map = {
+                '.js': '.spec.js',
+                '.spec.js': '.js'
+            };
+
+            assert.deepEqual(getSuffixForFilename(map, filename), {fromSuffix: '.spec.js', toSuffix: '.js'});
+        });
+    });
 });
