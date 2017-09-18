@@ -7,15 +7,15 @@ suite('Make Spec Filename', function() {
     test('returns spec filename for "/home/bob/index.js"', function() {
         var srcFile = {
             uri: {
-                fsPath: '/home/bob/index.js'
+                fsPath: '/home/bob/src/index.js'
             }
         }
 
         var configuration = {
-            fromSuffix: '.js',
-            toSuffix: '.kitkat.js',
+            fromRegex: '(.*)src/(.*).js',
+            toRegex: 'test/$1.kitkat.js',
         }
 
-        assert.equal(makeSpecFileName(srcFile, configuration), '/home/bob/index.kitkat.js')
+        assert.equal(makeSpecFileName(srcFile, configuration), '/home/bob/test/index.kitkat.js')
     })
 })

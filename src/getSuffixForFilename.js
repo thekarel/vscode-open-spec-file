@@ -1,16 +1,16 @@
-const isSuffixMatch = (suffix, str) => new RegExp(`${suffix}$`).test(str)
+const isSuffixMatch = (regex, str) => new RegExp(regex).test(str)
 
 const NO_MATCH = {
     toSuffix: null
 }
 
 module.exports = (map, fileName) => {
-    for (const fromSuffix in map) {
+    for (const fromRegex in map) {
 
-        if (isSuffixMatch(fromSuffix, fileName)) {
+        if (isSuffixMatch(fromRegex, fileName)) {
             return {
-                fromSuffix,
-                toSuffix: map[fromSuffix]
+                fromRegex,
+                toRegex: map[fromRegex]
             }
         }
     }

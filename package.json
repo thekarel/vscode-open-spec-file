@@ -32,8 +32,8 @@
                 "openSpecFile.suffixMap": {
                     "type": "object",
                     "default": {
-                        ".js": ".spec.js",
-                        ".spec.js": ".js",
+                        "(.*)src/(.*).js": "test/$1.spec.js",
+                        "(.*)test/(.*).spec.js": "src/$1.js",
                         ".html": ".css"
                     }
                 }

@@ -17,13 +17,13 @@ module.exports = function () {
         return
     }
 
-    const {fromSuffix, toSuffix} = getSuffixForFilename(suffixMap, currentDocument.fileName)
+    const {fromRegex, toRegex} = getSuffixForFilename(suffixMap, currentDocument.fileName)
 
-    if (!toSuffix) {
+    if (!toRegex) {
         return
     }
 
-    const specFilePath = makeSpecFilePath(currentDocument, {fromSuffix, toSuffix})
+    const specFilePath = makeSpecFilePath(currentDocument, {fromRegex, toRegex})
 
     if (!fileExists(specFilePath)) {
         createFile(specFilePath)
