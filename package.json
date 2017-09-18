@@ -17,13 +17,13 @@
     "main": "./src/extension",
     "contributes": {
         "commands": [{
-                "command": "extension.openSpecFile",
-                "title": "Open Spec File"
+            "command": "extension.openSpecFile",
+            "title": "Open Spec File"
         }],
         "keybindings": [{
-                "command": "extension.openSpecFile",
-                "key": "ctrl+k ctrl+k",
-                "mac": "cmd+k cmd+k"
+            "command": "extension.openSpecFile",
+            "key": "ctrl+k ctrl+k",
+            "mac": "cmd+k cmd+k"
         }],
         "configuration": {
             "type": "object",
