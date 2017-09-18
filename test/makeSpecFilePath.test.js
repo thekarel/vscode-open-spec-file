@@ -12,8 +12,8 @@ suite('Make Spec Filename', function() {
         }
 
         var configuration = {
-            fromSuffix: '.js',
-            toSuffix: '.kitkat.js',
+            fromRegex: '(.*).js',
+            toRegex: '(.*).kitkat.js',
         }
 
         assert.equal(makeSpecFileName(srcFile, configuration), '/home/bob/index.kitkat.js')

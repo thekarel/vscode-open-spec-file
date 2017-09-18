@@ -11,18 +11,18 @@ suite('Get Suffix For Document', function() {
             '.avi': '.str',
         }
 
-        assert.equal(getSuffixForFilename(map, filename).toSuffix, null)
+        assert.equal(getSuffixForFilename(map, filename).toRegex, null)
     });
 
     test('returns relevant map', function() {
-        const filename = '/a/b/c.foo'
+        const filename = 'src/a/b/c.foo'
 
         const map = {
-            '.foo': '.bar',
+            '(.*).foo': '.bar',
             '.js': '.spec.js'
         }
 
 
-        assert.deepEqual(getSuffixForFilename(map, filename), {fromSuffix: '.foo', toSuffix: '.bar'})
+        assert.deepEqual(getSuffixForFilename(map, filename), {fromRegex: '(.*).foo', toRegex: '.bar'})
     });
 });

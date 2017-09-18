@@ -16,15 +16,19 @@
     ],
     "main": "./src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.openSpecFile",
-            "title": "Open Spec File"
-        }],
-        "keybindings": [{
-            "command": "extension.openSpecFile",
-            "key": "ctrl+k ctrl+k",
-            "mac": "cmd+k cmd+k"
-        }],
+        "commands": [
+            {
+                "command": "extension.openSpecFile",
+                "title": "Open Spec File"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.openSpecFile",
+                "key": "ctrl+k ctrl+k",
+                "mac": "cmd+k cmd+k"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "Open Spec File configuration",
@@ -32,8 +36,8 @@
                 "openSpecFile.suffixMap": {
                     "type": "object",
                     "default": {
-                        ".js": ".spec.js",
-                        ".spec.js": ".js",
+                        "(.*)src/(.*).js": "test/$1.spec.js",
+                        "(.*)test/(.*).spec.js": "src/$1.js",
                         ".html": ".css"
                     }
                 }
