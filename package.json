@@ -2,7 +2,7 @@
     "name": "open-spec-file",
     "displayName": "Open Spec File",
     "description": "Quickly access spec files for TDD zen",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "thekarel",
     "icon": "icon.png",
     "engines": {
