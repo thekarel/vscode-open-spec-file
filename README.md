@@ -28,4 +28,6 @@ Using VS Code's preferences, you can set the map of suffixes:
 The mapping is one-way only, meaning you need to set up "reverse" pairs manually if you want to go from 
 extension1 to extension2 and vice versa.
 
+`openSpecFile.openInNewColumn` determines if the related file opens in a new column
+
 Icon by [Freepik](https://www.flaticon.com/free-icon/link_282100) CC 3.0 BY

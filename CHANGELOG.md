@@ -1,5 +1,7 @@
 # Change Log
 
+* 0.0.6: Thanks to @wardy for the PR!
+    * New feature: Configure if the related file should open in a new column
 * 0.0.5: Thanks to @taylonr for the PRs!
     * Fix: Use the longest key as the 'best' match (#10)
     * New feature: Open related file in 'other' tab (#11)
