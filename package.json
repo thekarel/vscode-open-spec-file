@@ -36,6 +36,10 @@
                         ".spec.js": ".js",
                         ".html": ".css"
                     }
+                },
+                "openSpecFile.openInNewColumn": {
+                    "type": "boolean",
+                    "default": true
                 }
             }
         }
