@@ -10,7 +10,7 @@ var vscode = require('vscode')
 module.exports = function () {
     var configuration = vscode.workspace.getConfiguration('openSpecFile')
     var suffixMap = configuration.get('suffixMap')
-    var shouldOpenInNewWindow = configuration.get('openInNewWindow')
+    var shouldOpenInNewColumn = configuration.get('openInNewColumn')
 
     var currentDocument = getCurrentDocument()
 
@@ -30,5 +30,5 @@ module.exports = function () {
         createFile(specFilePath)
     }
 
-    openFileInEditor(specFilePath, shouldOpenInNewWindow)
+    openFileInEditor(specFilePath, shouldOpenInNewColumn)
 }

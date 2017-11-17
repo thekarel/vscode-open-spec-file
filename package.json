@@ -37,7 +37,7 @@
                         ".html": ".css"
                     }
                 },
-                "openSpecFile.openInNewWindow": {
+                "openSpecFile.openInNewColumn": {
                     "type": "boolean",
                     "default": true
                 }
