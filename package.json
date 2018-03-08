@@ -33,6 +33,7 @@
                     "type": "object",
                     "default": {
                         ".js": ".spec.js",
+                        ".ts": ".spec.ts",
                         ".spec.js": ".js",
                         ".html": ".css"
                     }
